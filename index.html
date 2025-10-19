@@ -3,61 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NoorPath – Learn Islam Step by Step</title>
+  <title>NoorPath - Learn Islam with Ease</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Smooth button hover glow */
+    .cta-btn {
+      transition: all 0.3s ease;
+    }
+    .cta-btn:hover {
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-left">
-      <img src="images/logo.png" alt="NoorPath Logo" class="logo" />
+  <!-- Background Animation -->
+  <div class="floating-orbs"></div>
+  <div class="particles"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="NoorPath Logo" class="logo">
       <h1>NoorPath</h1>
     </div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#privacy">Privacy</a></li>
-      <li><a href="#terms">Terms</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#download" class="nav-link">Download</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Guiding New Muslims 🌙</h2>
-      <p>Learn Islam step-by-step through lessons, quizzes, and interactive activities — all in one app.</p>
-      <div class="store-buttons">
-        <a href="#" class="store google">Coming Soon on Google Play</a>
-        <a href="#" class="store apple">Coming Soon on App Store</a>
+  <!-- HERO / APP PREVIEW SECTION -->
+  <section class="app-preview" id="home">
+    <div class="text-content">
+      <h2>Learn Islam, Step by Step</h2>
+      <p>
+        NoorPath is your guided journey to understanding Islam — with
+        lessons, quizzes, and engaging content designed for new Muslims.
+        Start learning in a simple, interactive, and welcoming environment.
+      </p>
+      <button class="cta-btn" id="getStartedBtn">Get Started</button>
+    </div>
+
+    <div class="phone-container">
+      <div class="glow"></div>
+      <img src="images/app-preview.png" alt="NoorPath App Preview">
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features">
+    <h2>Why Choose NoorPath?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">📘</div>
+        <h3>Structured Learning</h3>
+        <p>Follow an easy step-by-step approach to understanding Islamic teachings.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🎮</div>
+        <h3>Interactive Quizzes</h3>
+        <p>Test your understanding with fun and engaging mini games after each topic.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🌙</div>
+        <h3>New Muslim Friendly</h3>
+        <p>Designed for beginners with visual guidance and simplified explanations.</p>
       </div>
     </div>
-    <div class="mockup">
-      <img src="images/app-preview.png" alt="NoorPath App Screenshot" />
+  </section>
+
+  <!-- DOWNLOAD SECTION -->
+  <section id="download">
+    <h2>Download NoorPath</h2>
+    <p>Start your journey today — available on your favorite platform.</p>
+    <div class="store-buttons">
+      <a href="#" class="store google">Google Play</a>
+      <a href="#" class="store apple">App Store</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About NoorPath</h2>
-    <p>NoorPath is a mobile app designed to help new Muslims learn Islam in a simple and structured way. It combines engaging lessons, games, and guided activities that support every step of your spiritual journey.</p>
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        “NoorPath helped me learn the basics of Islam in such a simple and calm way. Highly recommended for new Muslims.”
+      </div>
+      <div class="testimonial">
+        “I love the quizzes and gamified lessons! It makes learning fun and less intimidating.”
+      </div>
+    </div>
   </section>
 
-  <!-- Privacy Policy -->
-  <section id="privacy">
-    <h2>Privacy Policy</h2>
-    <p>At NoorPath, your privacy is our top priority. We only collect minimal information necessary to enhance your learning experience. Your data will never be sold or shared without consent.</p>
+  <!-- CALL TO ACTION -->
+  <section id="cta">
+    <h2>Start Your Journey with NoorPath</h2>
+    <p>Join thousands of learners exploring Islam the easy way.</p>
+    <a href="#" class="cta-btn">Download Now</a>
   </section>
 
-  <!-- Terms & Conditions -->
-  <section id="terms">
-    <h2>Terms & Conditions</h2>
-    <p>By using NoorPath, you agree to respect the community guidelines and use the app responsibly. We may update these terms occasionally to improve user experience and maintain a safe environment.</p>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 NoorPath. All rights reserved.</p>
-    <p>Contact: <a href="mailto:support@noorpath.com">support@noorpath.com</a></p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop">↑</button>
+
+  <!-- JS: Smooth scroll and Back to Top -->
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    const getStartedBtn = document.getElementById("getStartedBtn");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Smooth scroll for nav links
+    navLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        if (link.hash && link.hash.startsWith("#")) {
+          e.preventDefault();
+          document.querySelector(link.hash).scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    // Smooth scroll for Get Started button
+    getStartedBtn.addEventListener("click", () => {
+      document.getElementById("download").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    // Back to top
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 400 ? "block" : "none";
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
+</html>
